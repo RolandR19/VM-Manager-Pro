@@ -65,6 +65,24 @@ L'exécutable sera dans le dossier `dist/`.
 5. Cliquez **Enregistrer**
 6. Dans la liste, cliquez **▶ Démarrer**
 
+## Ajouter QEMU au "PATH" de Windows
+Cette étape permet à votre script Python de trouver le programme QEMU sans que vous ayez à modifier le code.
+
+Appuyez sur la touche Windows de votre clavier et tapez "Variables d'environnement".
+
+Choisissez "Modifier les variables d'environnement système".
+
+Dans la petite fenêtre qui s'ouvre, cliquez sur le bouton Variables d'environnement en bas à droite.
+
+Dans la section du bas (Variables système), cherchez la ligne nommée Path et cliquez sur Modifier.
+
+Cliquez sur le bouton Nouveau à droite.
+
+Collez exactement ce chemin : C:\Program Files\qemu (ou le dossier où vous avez installé QEMU).
+
+Cliquez sur OK sur toutes les fenêtres pour valider.
+
+Important : Redémarrez votre éditeur de code (VS Code, PyCharm) ou votre terminal pour que le changement soit pris en compte.
 ---
 
 ## Démarrage rapide
