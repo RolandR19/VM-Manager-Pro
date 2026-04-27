@@ -1,43 +1,43 @@
-# VM Manager Pro 🖥
+# VM Manager Pro 🖥️
 
-Gestionnaire de machines virtuelles avec interface graphique moderne, basé sur **QEMU**.
-
----
-
-## Fonctionnalités
-
-- ✅ Créer, modifier, supprimer des VMs
-- 💿 Ouvrir **plusieurs ISOs** simultanément (boot + pilotes + outils)
-- 🚀 **Démarrage rapide** : lancer une ISO sans créer de VM
-- ⚙️ Configuration complète : RAM, CPU, disque, réseau, affichage
-- 🗂 Création d'images disque QCOW2 / RAW intégrée
-- 💾 Sauvegarde automatique des configs en JSON
-- 🎨 Interface sombre moderne
+A modern graphical virtual machine manager based on **QEMU**.
 
 ---
 
-## Prérequis
+## Features
+
+- ✅ **Manage VMs:** Create, edit, and delete virtual machines with ease.
+- 💿 **Multi-ISO Support:** Open multiple ISO files simultaneously (boot, drivers, tools).
+- 🚀 **Quick Start:** Launch an ISO instantly without creating a permanent VM.
+- ⚙️ **Full Configuration:** Custom RAM, CPU, disk, network, and display settings.
+- 🗂 **Integrated Storage:** Built-in QCOW2 and RAW disk image creation.
+- 💾 **Auto-Save:** VM configurations are automatically saved in JSON format.
+- 🎨 **Modern UI:** Sleek dark-mode interface.
+
+---
+
+## Prerequisites
 
 ### 1. Python 3.8+
-https://www.python.org/downloads/
+[Download Python](https://www.python.org/downloads/)
 
 ### 2. QEMU
-**Windows :** https://www.qemu.org/download/#windows  
-Installez et **ajoutez QEMU au PATH** (ex : `C:\Program Files\qemu`)
+**Windows:** [Download QEMU for Windows](https://www.qemu.org/download/#windows)  
+Install and **add QEMU to your PATH** (e.g., `C:\Program Files\qemu`).
 
-**Linux :**
+**Linux:**
 ```bash
 sudo apt install qemu-system-x86
 ```
 
-**macOS :**
+**macOS:**
 ```bash
 brew install qemu
 ```
 
 ---
 
-## Lancer l'application
+## Running the Application
 
 ```bash
 python vm_manager.py
@@ -45,57 +45,53 @@ python vm_manager.py
 
 ---
 
-## Compiler en .exe (Windows)
+## Building the .exe (Windows)
 
 ```bash
 pip install pyinstaller
 python build.py
 ```
 
-L'exécutable sera dans le dossier `dist/`.
+The executable will be located in the `dist/` folder.
 
 ---
 
-## Créer une VM — Guide rapide
+## Quick Start Guide: Creating a VM
 
-1. Cliquez **➕ Nouvelle VM**
-2. Donnez un nom, choisissez l'OS
-3. Ajoutez votre ISO avec **+ Ajouter ISO**
-4. (Optionnel) Créez une image disque avec **Créer image**
-5. Cliquez **Enregistrer**
-6. Dans la liste, cliquez **▶ Démarrer**
-
-## Ajouter QEMU au "PATH" de Windows
-Cette étape permet à votre script Python de trouver le programme QEMU sans que vous ayez à modifier le code.
-
-Appuyez sur la touche Windows de votre clavier et tapez "Variables d'environnement".
-
-Choisissez "Modifier les variables d'environnement système".
-
-Dans la petite fenêtre qui s'ouvre, cliquez sur le bouton Variables d'environnement en bas à droite.
-
-Dans la section du bas (Variables système), cherchez la ligne nommée Path et cliquez sur Modifier.
-
-Cliquez sur le bouton Nouveau à droite.
-
-Collez exactement ce chemin : C:\Program Files\qemu (ou le dossier où vous avez installé QEMU).
-
-Cliquez sur OK sur toutes les fenêtres pour valider.
-
-Important : Redémarrez votre éditeur de code (VS Code, PyCharm) ou votre terminal pour que le changement soit pris en compte.
----
-
-## Démarrage rapide
-
-Cliquez **🚀 Rapide** pour lancer directement une ou plusieurs ISOs  
-sans créer de VM sauvegardée.
+1. Click **➕ New VM**.
+2. Name your machine and choose the OS.
+3. Attach your ISO via **+ Add ISO**.
+4. (Optional) Create a disk image using **Create Image**.
+5. Click **Save**.
+6. Select your VM from the list and click **▶ Start**.
 
 ---
 
-## Structure des fichiers
+## Adding QEMU to the Windows "PATH"
+This step ensures the Python script can locate QEMU automatically without manual code modifications.
 
-```
-vm_manager.py    # Application principale
-build.py         # Script de compilation .exe
-vm_config.json   # Configuration des VMs (auto-généré)
+1. Press the **Windows Key** and type "Environment Variables."
+2. Select **"Edit the system environment variables."**
+3. In the window that appears, click the **Environment Variables** button at the bottom right.
+4. Under **System variables** (the bottom section), find the **Path** variable and click **Edit**.
+5. Click **New** on the right side.
+6. Paste the following path: `C:\Program Files\qemu` (or the folder where QEMU was installed).
+7. Click **OK** on all windows to save changes.
+
+> **Note:** Restart your code editor (VS Code, PyCharm) or terminal for the changes to take effect.
+
+---
+
+## Instant Launch
+
+Click **🚀 Quick** to directly boot one or more ISOs without saving a VM configuration.
+
+---
+
+## File Structure
+
+```text
+vm_manager.py    # Main application
+build.py         # Compilation script for .exe
+vm_config.json   # VM configurations (auto-generated)
 ```
